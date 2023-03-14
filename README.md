@@ -35,6 +35,8 @@
 ##### При нажатии на "Собрать сейчас" начнется сборка тестов и их прохождение, через виртуальную машину при помощи Selenoid.
 ![This is an image](resources/screenshots/jenkins.png)
 
+Также мы можем посмотреть выполнение тестов в консоли перейдя во вкладку "Вывод консоли" у определенного билда
+![This is an image](resources/screenshots/jenkins_console.png)
 
 <!-- Allure report -->
 
