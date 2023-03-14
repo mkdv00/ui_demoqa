@@ -102,6 +102,42 @@ class Form:
         self.add_city(user)
         self.submit()
 
+    def check_data(self, value):
+        browser.element('.table-responsive').should(have.text(value))
+        return self
+
+    def check_validation_first_name(self):
+        browser.element('#firstName')\
+            .should(have.css_property('border-color', value='rgb(40, 167, 69)'))
+        return self
+
+    def check_validation_last_name(self):
+        browser.element('#lastName') \
+            .should(have.css_property('border-color', value='rgb(40, 167, 69)'))
+        return self
+
+    def check_validation_gender(self):
+        browser.element('[for^="gender-radio"]') \
+            .should(have.css_property('border-color', value='rgb(40, 167, 69)'))
+        return self
+
+    def check_validation_phone_number(self):
+        browser.element('#userNumber') \
+            .should(have.css_property('border-color', value='rgb(40, 167, 69)'))
+        return self
+
+    def check_validation_email(self):
+        browser.element('#userEmail')\
+            .should(have.css_property('border-color', value='rgb(40, 167, 69)'))
+        return self
+
+    def check_invalid_controls(self, control):
+        value = 'rgb(220, 53, 69)'
+
+        browser.element(control)\
+            .should(have.css_property('border-color', value=value))
+        return self
+
     def validate_form(self, user):
         user_birth = f'{user.birth_day} {user.birth_month},{user.birth_year}'
         user_full_name = user.first_name + ' ' + user.last_name
