@@ -1,0 +1,2 @@
+selenoid_url = "https://user1:1234@selenoid.autotests.cloud/wd/hub"
+demo_qa_base_url = "https://demoqa.com"
