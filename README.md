@@ -34,9 +34,9 @@
 
 ### <img width="3%" title="Jenkins" src="resources/logo/jenkins.png"> Запуск проекта в Jenkins
 
-### [Job](https://jenkins.autotests.cloud/job/UI_demoqa_qa_guru_python_2/)
+### [Job](https://jenkins.autotests.cloud/job/kudaev-demo-qa/)
 
-##### При нажатии на "Собрать сейчас" начнется сборка тестов и их прохождение, через виртуальную машину в Selenide.
+##### При нажатии на "Собрать сейчас" начнется сборка тестов и их прохождение, через виртуальную машину при помощи Selenoid.
 ![This is an image](resources/screenshots/jenkins.png)
 
 
@@ -44,7 +44,7 @@
 
 ### <img width="3%" title="Allure Report" src="resources/logo/allure_report.png"> Allure report
 
-##### После прохождения тестов, результаты можно посмотреть в Allure отчете, где так же содержится ссылка на Jenkins
+##### После прохождения тестов, результаты автоматически сохраняются. Чтобы посмотреть Allure отчет нужно нажать на иконке allure report у сборки.
 ![This is an image](resources/screenshots/allure_dashboard.png)
 
 ##### Во вкладке Graphs можно посмотреть графики о прохождении тестов, по их приоритезации, по времени прохождения и др.
@@ -61,9 +61,9 @@
 
 ### <img width="3%" title="Allure TestOps" src="resources/logo/allure_testops.png"> Интеграция с Allure TestOps
 
-### [Dashboard](https://allure.autotests.cloud/project/1720/dashboards)
+### [Dashboard](https://allure.autotests.cloud/project/2021/dashboards)
 
-##### Так же вся отчетность сохраняется в Allure TestOps, где строятся аналогичные графики.
+##### Вся отчетность сохраняется в Allure TestOps, где строятся аналогичные графики и тестовые кейсы.
 ![This is an image](resources/screenshots/allure_testops_dashboard.png)
 
 #### Во вкладке со сьютами, мы можем:
@@ -74,11 +74,14 @@
 
 ![This is an image](resources/screenshots/allure_testops_suites.png)
 
+Во вкладке Launches мы можем видить тестовые прогоны:
+![This is an image](resources/screenshots/tests_runs.png)
+
 
 <!-- Jira -->
 
 ### <img width="3%" title="Jira" src="resources/logo/jira.png"> Интеграция с Jira
-##### Настроив через Allure TestOps интеграцию с Jira, в тикет можно пробросить результат прохождение тестов и список тест-кейсов из Allure
+##### С помощью Allure TestOps можно сделать интеграцию с Jira, в тикет можно добавить результат прохождение тестов и список тест-кейсов.
 
 ![This is an image](resources/screenshots/jira.png)
 
@@ -86,6 +89,6 @@
 <!-- Telegram -->
 
 ### <img width="3%" title="Telegram" src="resources/logo/tg.png"> Интеграция с Telegram
-##### После прохождения тестов, в Telegram bot приходит сообщение с графиком и небольшой информацией о тестах.
+##### После прохождения тестов, в Telegram bot приходит сообщение с графиком и небольшой информацией о тестах, а также ссылка на allure report.
 
-![This is an image](resources/screenshots/tg_bot.png)
+![This is an image](resources/screenshots/tg_report.png)
