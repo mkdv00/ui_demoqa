@@ -1,10 +1,14 @@
+import os
+
 import pytest
+from dotenv import load_dotenv
 from selene.support.shared import browser
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-from config import settings
 from demo_qa.utils import attach
+
+load_dotenv()
 
 
 @pytest.fixture(scope='function', autouse=True)
@@ -22,13 +26,13 @@ def setup_browser():
     options.capabilities.update(selenoid_capabilities)
 
     driver = webdriver.Remote(
-        command_executor=settings.selenoid_url,
+        command_executor=os.getenv('SELENOID_URL'),
         options=options
     )
 
     browser.config.driver = driver
     browser.config.driver.maximize_window()
-    browser.config.base_url = settings.demo_qa_base_url
+    browser.config.base_url = os.getenv('DEMO_QA_BASE_URL')
 
     yield browser
 
