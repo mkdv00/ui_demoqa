@@ -77,10 +77,10 @@ def test_validation_field_email(setup_browser):
         form_module.open_page()
 
     with allure.step('Fill main fields and email without @'):
-        form_module.add_name_and_surname(test_user) \
-            .choose_gender(test_user) \
-            .add_contacts(test_user) \
-            .submit()
+        form_module.add_name_and_surname(test_user)
+        form_module.choose_gender(test_user)
+        form_module.add_contacts(test_user)
+        form_module.submit()
 
     with allure.step('Check validation field email'):
         form_module.check_validation_email()
