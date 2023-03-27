@@ -75,7 +75,7 @@ class Form:
         return self
 
     def send_file(self):
-        path = work_with_path.get_path('screenshot/photo.jpg')
+        path = work_with_path.get_path('resources/photo.jpg')
         browser.element('#uploadPicture').set_value(path)
         return self
 

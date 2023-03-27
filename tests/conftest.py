@@ -11,7 +11,7 @@ from demo_qa.utils import attach
 load_dotenv()
 
 
-@pytest.fixture(scope='function', autouse=True)
+@pytest.fixture(scope='function')
 def setup_browser():
     options = Options()
     selenoid_capabilities = {
@@ -31,7 +31,6 @@ def setup_browser():
     )
 
     browser.config.driver = driver
-    browser.config.driver.maximize_window()
     browser.config.base_url = os.getenv('DEMO_QA_BASE_URL')
 
     yield browser
