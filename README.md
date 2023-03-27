@@ -25,6 +25,11 @@
 ### Что проверяют тесты
 ![This is an image](images/screenshot/test_cases.png)
 
+### Особенности тестов:
+
+1. Тест test_submitting_form_successfully - данный тест параметризирован на запуск браузера на разных разрешений экрана (1920x1080 и 1280x720)
+2. Тесты test_validation_field_email и test_send_empty_form - это примеры тестов созданных с использованием Page Module
+
 
 <!-- Jenkins -->
 
