@@ -22,7 +22,7 @@
 
 <!-- Тест кейсы -->
 
-### Что проверяют тесты
+### Что проверяют UI тесты
 ![This is an image](images/screenshot/test_cases.png)
 
 ### Особенности тестов:
@@ -30,6 +30,12 @@
 1. Тест test_submitting_form_successfully - данный тест параметризирован на запуск браузера на разных разрешений экрана (1920x1080 и 1280x720)
 2. Тесты test_validation_field_email и test_send_empty_form - это примеры тестов созданных с использованием Page Module
 
+### Демонстрация тестов для работы с файлами
+![This is an image](images/screenshot/files_test_cases.png)
+Первый тест создает архив из 3 файлов с расширением: pdf, csv, xlsx. 
+Остальные три читают файлы внутри архива и проверяют содержимое файлов:
+![This is an image](images/screenshot/tests-files.png)
+![This is an image](images/screenshot/test-files-dir.png)
 
 <!-- Jenkins -->
 

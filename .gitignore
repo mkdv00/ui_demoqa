@@ -230,3 +230,4 @@ allure-results/
 # Ignore dynaconf secret files
 .secrets.*
 .idea
+output/
